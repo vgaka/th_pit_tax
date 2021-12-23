@@ -2,16 +2,18 @@
 Thailand personal income tax calculate Yr 2560 on ward
 from th_pit_2560 import cal_pit_2560 as taxcal
 
-####################
-Start
-####################
-i = 110001.0
-while i <= 5500000.0 :
-    print('income :{} tax :{}'.format(i, cal_pit_2560(i)))
-    i+=10000.0
-####################
-result :
-income :110001.0 tax :0
+
+
+>####################
+>Start
+>####################
+>i = 110001.0
+>while i <= 5500000.0 :
+>    print('income :{} tax :{}'.format(i, cal_pit_2560(i)))
+>    i+=10000.0
+>####################
+>result :
+>income :110001.0 tax :0
 income :120001.0 tax :0
 income :130001.0 tax :0
 income :140001.0 tax :0
