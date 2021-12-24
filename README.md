@@ -1,5 +1,5 @@
 # th_pit_tax
-Thailand personal income tax calculate Yr 2560 on ward
+Thailand personal income tax calculate Yr 2560 - 2563
 from th_pit_2560 import cal_pit_2560 as taxcal
 
 
