@@ -7,7 +7,7 @@
 #### Start
 #### i = 110001.0
 #### while i <= 5500000.0 :
-####     print('income :{} tax :{}'.format(i, cal_pit_2560(i)))
+####     print('income :{} tax :{}'.format(i, taxcal(i)))
 ####     i+=10000.0
 #### result :
 #### income :110001.0 tax :0
