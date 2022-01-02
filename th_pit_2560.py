@@ -15,13 +15,13 @@ NetIncomeData =[
 
 incomedata = pd.DataFrame(NetIncomeData, columns=['Lower','High','Maxinterval','Rate','Maxtaxinterval','Accumtax'])
 
-def cal_pit_2560(netincome)->float:
+def cal_pit_2560(netincome:float)->float:
     pittax = lambda ac, ri, cr : (ri*cr)+ac if ~np.isnan(ac) else 0
     tax = incomedata[(incomedata['Lower']<=netincome) & (netincome<=incomedata['High'])]
     if np.isnan(incomedata[incomedata['High']<=netincome]['Accumtax'].max()) :
         return 0
     else :
-        return pittax(incomedata[incomedata['High']<=netincome]['Accumtax'].max(), (netincome - int(tax['Lower'])), tax['Rate'].sum()*(~np.isnan(incomedata[incomedata['High']<=netincome]['Accumtax'].max())))
+        return pittax(incomedata.loc[tax.index[0]-1,'Accumtax'], (netincome - int(tax['Lower'])), tax['Rate'].sum()*(~np.isnan(incomedata[incomedata['High']<=netincome]['Accumtax'].max())))
 
 def main():
     income=1340000.0
